@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ask Her Out!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <p class="header_text">Do you wanna go out with me?</p>
+        <div class="gif_container">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHAyZ2NhdDJrbmVucGg5MnRlZnAyc2Vtb2t6b2N6Y2N2azM4MGh6eC/gGcWk2YqcSBLk/giphy.gif" style="height:150px;"/>
+        </div>
+        <p class="header_text">Are you free tomorrow?</p>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="yesClicked()">Yes</button>
+            <button class="btn" id="noButton">No</button>
+        </div>
+    </div>
+    <script>
+        const noBtn = document.getElementById('noButton');
+        noBtn.addEventListener('mouseover', function () {
+            noBtn.style.marginTop = `${Math.floor(Math.random()*200)}px`;
+            noBtn.style.marginLeft = `${Math.floor(Math.random()*200)}px`;
+        });
+        function yesClicked() {
+            window.location.href = "yes.html";
+        }
+    </script>
+</body>
+</html>
